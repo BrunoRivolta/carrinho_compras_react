@@ -5,4 +5,3 @@ export default function Store() {
     <div>Store</div>
   )
 }
-finalizada
