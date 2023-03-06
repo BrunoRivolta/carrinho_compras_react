@@ -15,6 +15,7 @@ export default function Router() {
             <Route path='/carrinho' element={<Cart />} ></Route>
             <Route path='/pedidos' element={<Requests />} ></Route>
             <Route path='/finalizar' element={<Finished />} ></Route>
+            <Route path="*" element={<div>Pagina não encontrada!</div>} />
           </Route>
         </Routes>
     </BrowserRouter> 

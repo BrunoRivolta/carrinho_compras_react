@@ -1,0 +1,28 @@
+.container {
+    height: 40px;
+    background-color: rgb(175, 172, 172);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    .burguer {
+        font-size: 1.5em;
+        fill: white;
+    }
+    .cart {
+        font-size: 1.5em;
+        fill: white;
+    }
+}
+ 
+.links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(117, 122, 121);
+    width: 20%;
+    height: 100vh;
+    position: absolute; 
+    left: -50vw;
+    transition: 0.5s;
+}
