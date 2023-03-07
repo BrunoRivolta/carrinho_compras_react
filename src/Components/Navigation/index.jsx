@@ -22,8 +22,12 @@ export default function Navigation() {
             <GiHamburgerMenu 
                 className={styles.burguer}
                 onClick={() => menuToggle()}
-            />
-            <BsCart4 className={styles.cart} />
+                />
+            <div className={styles.cart_container}>
+                <BsCart4 className={styles.cart} />
+                <p className={styles.cart_number}>01</p>
+                <spam className={styles.cart_back}></spam>
+            </div>
             <nav className={styles.links} style={menu}>
                 <Link to={'#'} className={styles.link}> Loja</Link>
                 <Link to={'#'} className={styles.link}> Carrinho</Link>
