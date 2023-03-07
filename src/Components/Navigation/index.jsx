@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { BsCart4 } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import styles from './Navigation.module.scss'
-import logo from 'assets/img/code.png'
 
 export default function Navigation() {
 
