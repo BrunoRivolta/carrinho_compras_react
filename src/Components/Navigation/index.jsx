@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { BsCart4 } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import styles from './Navigation.module.scss'
+import logo from 'assets/img/code.png'
 
 export default function Navigation() {
 
@@ -24,13 +25,13 @@ export default function Navigation() {
                 onClick={() => menuToggle()}
             />
             <BsCart4 className={styles.cart} />
+            <nav className={styles.links} style={menu}>
+                <Link to={'#'} className={styles.link}> Loja</Link>
+                <Link to={'#'} className={styles.link}> Carrinho</Link>
+                <Link to={'#'} className={styles.link}> Pedidos</Link>
+                <Link to={'#'} className={styles.link}> Contato</Link>
+            </nav>
         </section>
-        <nav className={styles.links} style={menu}>
-            <Link to={'#'}> Loja</Link>
-            <Link to={'#'}> Carrinho</Link>
-            <Link to={'#'}> Pedidos</Link>
-            <Link to={'#'}> Contato</Link>
-        </nav>
     </section>
   )
 }
