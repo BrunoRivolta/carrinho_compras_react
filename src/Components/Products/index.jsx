@@ -1,11 +1,24 @@
 import React from 'react'
 import Product from './Product'
+import styles from './Products.module.scss'
 
 export default function Products() {
   return (
-    <section>
+    <section className={styles.container}>
       <div>Products</div>
-      <Product />
+      <div className={styles.products}>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+      </div>
     </section>
     )
 }

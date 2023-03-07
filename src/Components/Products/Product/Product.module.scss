@@ -1,0 +1,38 @@
+.container {
+    margin: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    .image {
+        width: 250px;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        img {
+            width: 250px;
+        }
+    }
+    .text {
+        padding: 0 15px;
+        h2 {
+            font-size: 0.8em;
+        }
+        .price {
+            margin: 10px 0;
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.8em;
+                color: #000000;
+                font-weight: 400;
+            }
+        }
+        p {
+            font-size: 0.8em;
+            color: #00A650;
+            font-weight: 400;
+        }
+    }
+}

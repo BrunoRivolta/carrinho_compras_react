@@ -1,0 +1,8 @@
+.container {
+    background-color: #dbdbdb;
+    .products {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
