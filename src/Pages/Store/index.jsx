@@ -1,3 +1,4 @@
+import Footer from 'Components/Footer'
 import Header from 'Components/Header'
 import Modal from 'Components/Modal'
 import Navigation from 'Components/Navigation'
@@ -15,6 +16,7 @@ const [modal, setModal] = useState(false)
       <Products />
       <Modal isOpen={modal} setModal={() => setModal(!modal)}/>
       <button onClick={() => setModal(true)}>ola</button>
+      <Footer />
     </>
   )
 }
