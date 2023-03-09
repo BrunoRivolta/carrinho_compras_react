@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './Product.module.scss'
 
-export default function Product({ img, title, price }) {
+export default function Product({ img, title, price, onClick }) {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <img src={img} alt={title} />
+        <img onClick={onClick} src={img} alt={title} />
       </div>
       <div className={styles.text}>
         <h2>{title}</h2>

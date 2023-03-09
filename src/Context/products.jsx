@@ -1,14 +1,14 @@
 import { createContext, useState } from "react";
 
-export const ProductContext = createContext();
-ProductContext.displayName = "Product";
+export const ProductsContext = createContext();
+ProductsContext.displayName = "Products";
 
-export default function ProductProvider({ children }) {
-    const [Product, setProduct] = useState([]);
+export default function ProductsProvider({ children }) {
+    const [Products, setProducts] = useState([]);
     return (
-        <ProductContext.Provider
-            value={{ Product, setProduct }}>
+        <ProductsContext.Provider
+            value={{ Products, setProducts }}>
             {children}
-        </ProductContext.Provider>
+        </ProductsContext.Provider>
     )
 }
