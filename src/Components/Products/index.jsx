@@ -13,7 +13,6 @@ export default function Products() {
             key={product.id} 
             img={product.img} 
             title={product.title} 
-            description={product.description} 
             price={product.price} 
           />
         })}

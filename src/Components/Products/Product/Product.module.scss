@@ -9,8 +9,11 @@
         height: 220px;
         display: flex;
         align-items: center;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
         img {
-            width: 250px;
+            width: 65%;
         }
     }
     .text {
