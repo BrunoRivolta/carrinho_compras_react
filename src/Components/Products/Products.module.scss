@@ -1,5 +1,11 @@
 .container {
     background-color: #dbdbdb;
+    padding-bottom: 15px;
+    .title {
+        font-size: 1em;
+        padding: 10px;
+        font-weight: 400;
+    }
     .products {
         display: flex;
         justify-content: center;

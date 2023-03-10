@@ -13,7 +13,7 @@ export default function Products() {
 
   return (
     <section className={styles.container}>
-      <div>Products</div>
+      <h2 className={styles.title}>Produtos:</h2>
       <div className={styles.products}>
         {db.map(product => {
           return <Product 
