@@ -1,39 +1,56 @@
+import Button from 'Components/Button'
 import CloseButton from 'Components/CloseButton'
+import { AiOutlineCheckCircle } from 'react-icons/ai';
+import Input from 'Components/Input'
 import { CartContext } from 'Context/cart'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from './Modal.module.scss'
 
 export default function Modal({ isOpen, setModal, product }) { 
 
     const { cart, setCart } = useContext(CartContext)
+    const [ qnt, setQnt ] = useState(1)
+    const [ waming, setWaming ] = useState('')
+    const [ check, setCheck ] = useState('none')
 
-    function addCart(product) {
-        const newCart = cart
-        product.amount = 1
+
+    function addCart(product) { 
+        let newCart = []
+        product.qnt = Number(qnt)
         if(cart.length === 0) {
-            setCart([product])
+            newCart.push(product)
+            setCart(newCart)
+            setCheck('block')
         } else {
-            newCart.forEach((item, index) => {
-                if(product.id === item.id) {
-                    const newProduct = product
-                    const newAmount = product.amount + item.amount
-                    newProduct.amount = newAmount
-                    newCart.splice(index, 1)
-                    newCart.push(newProduct)
-                    setCart([newProduct])
-                } else {
-                    setCart(old => [...old, product])
-                }
+            let repeated = false
+            cart.forEach(item => {
+                if(item.id === product.id){
+                    setWaming('O produto ja esta no carrinho!')
+                    repeated = true
+                } 
             })
+            if(repeated === false) {
+                console.log('produto adicionado')
+                newCart = [...cart]
+                newCart.push(product)
+                setCart(newCart)
+                setCheck('block')
+            }
         }
-
     }
 
     if(isOpen) {        
         return (
             <div className={styles.background}>
                 <div className={styles.modal}>
-                    <div onClick={setModal} className={styles.closeButton}>
+                    <div 
+                        onClick={() =>{
+                            setModal()
+                            setWaming('')
+                            setCheck('none')
+                        }} 
+                        className={styles.closeButton}
+                    >
                         <CloseButton />
                     </div>
                     <div className={styles.main}>
@@ -45,10 +62,27 @@ export default function Modal({ isOpen, setModal, product }) {
                             <h1>R$ {product.price}</h1>
                             <p>em 5x 35,60 sem juros</p>
                             <p>frete grátis</p>
-                            <input type="number" name="qnt" id="qnt" min={1} max={5}/>
-                            <button onClick={() => addCart(product)}>Adicionar ao carrinho</button>
+                            <div className={styles.action}>
+                                <Input 
+                                    className={styles.qnt}
+                                    toAlter={value => setQnt(value)} 
+                                    type={'number'} 
+                                    min={1}
+                                    placeholder={1}
+                                />
+                                <Button 
+                                    onClick={() => 
+                                        addCart(product)}
+                                >Adicionar ao carrinho
+                                </Button>
+                                <AiOutlineCheckCircle 
+                                    className={styles.check}
+                                    style={{ display: check }}
+                                />
+                            </div>
                         </div>
                         <div className={styles.description}>
+                            <span>{waming}</span>
                             <h2>Descrição</h2>
                             <p>{product.description}</p>
                         </div>
