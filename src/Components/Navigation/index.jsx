@@ -30,7 +30,7 @@ export default function Navigation() {
                 <p className={styles.cart_number}>0{cart.length}</p>
                 <span className={styles.cart_back}></span>
             </div>
-            <nav className={styles.links} style={menu}>
+            <nav className={styles.links} style={menu} onClick={() => menuToggle()}>
                 <Link to={'/'} className={styles.link}> Loja</Link>
                 <Link to={'/carrinho'} className={styles.link}> Carrinho</Link>
                 <Link to={'/pedidos'} className={styles.link}> Pedidos</Link>

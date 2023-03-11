@@ -2,6 +2,7 @@ import Button from 'Components/Button'
 import { CartContext } from 'Context/cart'
 import React, { useContext, useEffect, useState } from 'react'
 import styles from './Cart.module.scss'
+import CartProduct from './CartProduct/CartProduct'
 
 
 export default function Cart() {
@@ -25,18 +26,13 @@ export default function Cart() {
       <h2 className={styles.title}>Carrinho:</h2>
       <div className={styles.products}>
         {cart.map(item => (
-          <div className={styles.item}>
-            <div className={styles.image}>
-              <img src={item.img} alt={item.title} />
-            </div>
-            <div className={styles.text}>
-              <h2>{item.title}</h2>
-              <div className={styles.price}>
-                <h1>R$ {item.price}</h1>
-                <p>Qnt: {item.qnt}</p>
-              </div>
-            </div>
-          </div>
+          <CartProduct 
+            key={item.id}
+            img={item.img} 
+            title={item.title} 
+            price={item.price} 
+            qnt={item.qnt}
+          />
         ))}
       </div>
       <div className={styles.total}>
