@@ -4,10 +4,11 @@ import { OrderContext } from 'Context/order'
 import React, { useContext, useEffect, useState } from 'react'
 import styles from './Cart.module.scss'
 import CartProduct from './CartProduct/CartProduct'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function Cart() {
 
-  const { setOrder } = useContext(OrderContext) 
+  const { order, setOrder } = useContext(OrderContext) 
   const { cart, setCart } = useContext(CartContext)
   const [total, setTotal] = useState(0) 
   const [emptyCart, setEmptyCart] = useState(true)
@@ -28,7 +29,16 @@ export default function Cart() {
   }, [cart])
   
   function payment() {
-    setOrder(cart)
+    const idOrder = uuidv4()
+    const newOrder = [[idOrder, cart]]
+    
+    if(order.length === 0) {
+      setOrder(newOrder)
+    } else {
+      const addOrder = [...order]
+      addOrder.push(newOrder)
+      setOrder(addOrder)
+    }
     setCart([])
     setCompletedPay(true)
   }
@@ -54,7 +64,7 @@ export default function Cart() {
       <div className={styles.empty} style={{ display: alertEmptyState }}>
         <h2>Sem itens no carrinho!</h2>
       </div>
-      <div className={styles.total}>
+      <div className={styles.total} style={{ display: buttonState }}>
         <h2>Total:</h2>
         <p>R$ {total.toFixed(2)}</p>
       </div>
