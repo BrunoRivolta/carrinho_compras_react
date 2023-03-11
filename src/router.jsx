@@ -1,5 +1,4 @@
 import Cart from 'Pages/Cart'
-import Finished from 'Pages/Finished'
 import Requests from 'Pages/Requests'
 import StandardPage from 'Pages/StandardPage'
 import Store from 'Pages/Store'
@@ -14,7 +13,6 @@ export default function Router() {
             <Route index element={<Store />} ></Route>
             <Route path='/carrinho' element={<Cart />} ></Route>
             <Route path='/pedidos' element={<Requests />} ></Route>
-            <Route path='/finalizar' element={<Finished />} ></Route>
             <Route path="*" element={<div>Pagina não encontrada!</div>} />
           </Route>
         </Routes>

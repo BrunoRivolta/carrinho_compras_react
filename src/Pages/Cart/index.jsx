@@ -36,7 +36,8 @@ export default function Cart() {
       setOrder(newOrder)
     } else {
       const addOrder = [...order]
-      addOrder.push(newOrder)
+      const add = [idOrder, cart]
+      addOrder.push(add)
       setOrder(addOrder)
     }
     setCart([])
