@@ -41,16 +41,26 @@
                 padding-left: 10px;
                 width: 90%;
                 h2 {
-                    margin-top: 5px;
+                    margin: 6px 0;
                     font-size: 1.2em;
                 }
                 h1 {
                     font-size: 1.3em;
                     margin: 10px 0;
+                    display: inline;
+                }
+                .cents {
+                    display: inline;
+                    position: relative;
+                    bottom: 7px;
                 }
                 p {
                     font-size: 0.8em;
                     margin: 5px 0;
+                }
+                .freight {
+                    color: #00A650;
+                    font-weight: 600;
                 }
                 .action {
                     margin: 10px 0;

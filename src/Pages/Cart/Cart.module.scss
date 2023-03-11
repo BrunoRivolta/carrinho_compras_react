@@ -1,0 +1,59 @@
+.container {
+    background-color: #dbdbdb;
+    padding-bottom: 20px;
+    .title {
+        font-size: 1em;
+        padding: 10px;
+        font-weight: 400;
+    }
+    .products {
+        .item {
+            margin: 5px 0;
+            display: flex;
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            background-color: white;
+            .image {
+                overflow: hidden;
+                width: 35%;
+                img {
+                    width: 100%;
+                }
+            }
+            .text {
+                padding: 0 8px;
+
+                h2 {
+                    font-size: 0.8em;
+                }
+                .price {
+                    h1 {
+                        font-size: 1em;
+                        margin: 5px;
+                    }
+                    p {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+    .total {
+        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+        h2{
+            font-size: 1.1em;
+            font-weight: 600;
+            padding-right: 10px;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+    .button {
+        padding: 10px 0;
+        text-align: center;
+    }
+}

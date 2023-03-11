@@ -13,7 +13,6 @@ export default function Modal({ isOpen, setModal, product }) {
     const [ waming, setWaming ] = useState('')
     const [ check, setCheck ] = useState('none')
 
-
     function addCart(product) { 
         let newCart = []
         product.qnt = Number(qnt)
@@ -39,6 +38,17 @@ export default function Modal({ isOpen, setModal, product }) {
         }
     }
 
+    document.onkeydown = function(e) {
+        if(e.key === 'Escape') {
+            setModal()
+            setWaming('')
+            setCheck('none')
+        }
+      }
+
+    const roundedPrice = Math.floor(product.price)
+    const leftover = (product.price - roundedPrice).toFixed(2)
+
     if(isOpen) {        
         return (
             <div className={styles.background}>
@@ -59,9 +69,10 @@ export default function Modal({ isOpen, setModal, product }) {
                         </div>
                         <div className={styles.info}>
                             <h2>{product.title}</h2>
-                            <h1>R$ {product.price}</h1>
-                            <p>em 5x 35,60 sem juros</p>
-                            <p>frete grátis</p>
+                            <h1>R$ {roundedPrice}</h1>
+                            <p className={styles.cents}>.{leftover * 100}</p>
+                            <p>em 5x de R${(product.price / 5).toFixed(2)} sem juros</p>
+                            <p className={styles.freight}>frete grátis</p>
                             <div className={styles.action}>
                                 <Input 
                                     className={styles.qnt}
@@ -73,7 +84,8 @@ export default function Modal({ isOpen, setModal, product }) {
                                 <Button 
                                     onClick={() => 
                                         addCart(product)}
-                                >Adicionar ao carrinho
+                                >
+                                    Adicionar ao carrinho
                                 </Button>
                                 <AiOutlineCheckCircle 
                                     className={styles.check}

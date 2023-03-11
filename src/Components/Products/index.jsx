@@ -4,15 +4,13 @@ import styles from './Products.module.scss'
 import db from './db.json'
 import Modal from 'Components/Modal'
 
-
 export default function Products() {
 
   const [modal, setModal] = useState(false)
   const [product, setProduct] = useState(false)
 
-
   return (
-    <section className={styles.container}>
+    <section className={styles.container} >
       <h2 className={styles.title}>Produtos:</h2>
       <div className={styles.products}>
         {db.map(product => {

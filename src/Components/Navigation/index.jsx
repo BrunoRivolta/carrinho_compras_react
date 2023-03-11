@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BsCart4 } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import styles from './Navigation.module.scss'
+import { CartContext } from 'Context/cart'
 
 export default function Navigation() {
 
+    const { cart } = useContext(CartContext) 
     const [menu, setMenu] = useState({ left: '-50vw' })
 
     function menuToggle() {
@@ -24,14 +26,14 @@ export default function Navigation() {
                 onClick={() => menuToggle()}
                 />
             <div className={styles.cart_container}>
-                <BsCart4 className={styles.cart} />
-                <p className={styles.cart_number}>05</p>
+                <Link to={'/carrinho'} ><BsCart4 className={styles.cart} /></Link> 
+                <p className={styles.cart_number}>0{cart.length}</p>
                 <span className={styles.cart_back}></span>
             </div>
             <nav className={styles.links} style={menu}>
-                <Link to={'#'} className={styles.link}> Loja</Link>
-                <Link to={'#'} className={styles.link}> Carrinho</Link>
-                <Link to={'#'} className={styles.link}> Pedidos</Link>
+                <Link to={'/'} className={styles.link}> Loja</Link>
+                <Link to={'/carrinho'} className={styles.link}> Carrinho</Link>
+                <Link to={'/pedidos'} className={styles.link}> Pedidos</Link>
                 <Link to={'#'} className={styles.link}> Contato</Link>
             </nav>
         </section>
