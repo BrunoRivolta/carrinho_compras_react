@@ -1,6 +1,7 @@
 .container {
     background-color: #dbdbdb;
     padding-bottom: 20px;
+    min-height: 75vh;
     .title {
         font-size: 1em;
         padding: 10px;
@@ -22,5 +23,16 @@
     .button {
         padding: 10px 0;
         text-align: center;
+    }
+    .alert {
+        text-align: center;
+        h2 {
+            margin: 5px;
+            font-size: 1em;
+            color: #26ae11;
+        }
+        p {
+            font-size: 0.8em;
+        }
     }
 }
