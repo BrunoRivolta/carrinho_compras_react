@@ -1,0 +1,46 @@
+.container {
+    background-color: #dbdbdb;
+    padding-bottom: 15px;
+    min-height: 70vh;
+    .title {
+        font-size: 1em;
+        padding: 10px;
+        font-weight: 400;
+    }
+    .products {
+        border-radius: 10px;
+        background-color: white;
+        padding: 5px 10px;
+        margin: 10px 0;
+        .info {
+            .subtitle {
+                font-size: 1em;
+                font-weight: 400;
+                padding: 5px 0;
+            }
+        }
+        .status {
+            p {
+                font-size: 0.8em;
+                font-weight: 300;
+                color: rgb(220, 213, 213);
+            }
+            .subtitle {
+                font-size: 1em;
+                font-weight: 400;
+                padding: 5px 0;
+            }
+            .active {
+                color: rgb(35, 109, 21);
+                font-size: 0.8em;
+                font-weight: 400;
+            }           
+        }
+    }
+    .empty {
+        text-align: center;
+        h2 {
+            font-size: 1.3em;
+        }
+    }
+}

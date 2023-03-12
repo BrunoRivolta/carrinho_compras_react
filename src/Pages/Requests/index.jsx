@@ -7,20 +7,29 @@ export default function Requests() {
 
   const { order } = useContext(OrderContext) 
 
+  const emptyRequest = order.length === 0 ? 'block' : 'none'
+
   return (
     <section className={styles.container} >
       <h2 className={styles.title}>Pedidos:</h2>
-      <div className={styles.products}>
         {order.map((order, index) => (
-          <section key={index}>
-            <h1>Pedido: {order[0]}</h1>
-            <h1>Itens:</h1>
-            <Purchase request={order[1]}/>
+          <section className={styles.products} key={index}>
+            <div className={styles.info}>
+              <h2 className={styles.subtitle}>Pedido {order[0]}</h2>
+              <h2 className={styles.subtitle}>Itens:</h2>
+              <Purchase request={order[1]}/>
+            </div>
+            <div className={styles.status}>
+              <h2 className={styles.subtitle}>Status:</h2>
+              <p className={styles.active}>✓ Separando pedido</p>
+              <p>✓ Enviado para transportadora</p>
+              <p>✓ Pedido a caminho</p>
+              <p>✓ Pedido entregue</p>
+            </div>
           </section>
         ))}
-      </div>
-      <div className={styles.empty} style={{ display: 'block' }}>
-        <h2>Sem itens no carrinho!</h2>
+      <div className={styles.empty} style={{ display: emptyRequest }}>
+        <h2>Sem pedidos no momento!</h2>
       </div>
     </section>
   )

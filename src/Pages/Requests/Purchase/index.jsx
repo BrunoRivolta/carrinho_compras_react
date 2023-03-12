@@ -4,15 +4,12 @@ import styles from './Purchase.module.scss'
 export default function Purchase({ request }) {
 
   return (
-    <div className={styles.item}>
-        <div className={styles.item}>
-          {request.map((product, index) => (
-            <section>
-              <p>1 = </p>
-              <p key={index}>{product.title}</p>
-            </section>
-          ))}
-        </div>
+    <div >
+      {request.map((product, index) => (
+        <section key={index} className={styles.item}>
+          <span className={styles.prod} >1 - {product.title}</span>
+        </section>
+      ))}
     </div>
   )
 }
