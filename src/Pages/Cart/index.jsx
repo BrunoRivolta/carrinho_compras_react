@@ -3,7 +3,7 @@ import { CartContext } from 'Context/cart'
 import { OrderContext } from 'Context/order'
 import React, { useContext, useEffect, useState } from 'react'
 import styles from './Cart.module.scss'
-import CartProduct from './CartProduct/CartProduct'
+import CartProduct from './CartProduct/'
 import { v4 as uuidv4 } from 'uuid'
 
 export default function Cart() {

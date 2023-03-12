@@ -20,7 +20,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 90%;
-        height: 80vh;
         border-radius: 10px;
         color: black;
         .main {
@@ -84,79 +83,17 @@
                 p {
                     font-size: 0.8em;
                     margin-top: 10px;
-    
+                    padding-bottom: 20px;
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1250px) {
     .background {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba($color: #000000, $alpha: 0.8);
-        z-index: 1000;
-        .closeButton {
-            top: -30px;
-            left: 25px;
-        }
         .modal {
-            background-color: white;
-            position: fixed;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 700px;
-            height: 50vh;
-            border-radius: 10px;
-            color: black;
-            .main {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid: 
-                    "img info"
-                    "descr descr";
-                height: 90%;
-                width: 100%;
-                padding: 15px;
-                .imgContainer {
-                    grid-area: img;
-                    display: flex;
-                    justify-content: center;
-                    img {
-                        width: 100%;
-                        margin-right: 10px;
-                    }
-                }
-                .info {
-                    grid-area: info;
-                    padding-left: 10px;
-                    width: 60%;
-                    h2 {
-                        font-size: 1.2em;
-                    }
-                    h1 {
-                        font-size: 1.3em;
-                    }
-                    input {
-                        width: 30px;
-                    }
-                }
-                .description {
-                    width: 90%;
-                    grid-area: descr;
-                    padding: 20px 10px;
-                    p {
-                        font-size: 0.9em;
-                        margin-top: 10px;
-                    }
-                }
-            }
+            width: 60%;
         }
     }
-
 }

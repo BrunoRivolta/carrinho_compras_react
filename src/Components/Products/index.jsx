@@ -27,6 +27,8 @@ export default function Products() {
     }
   }, [search])
 
+  const alert = db.length === 0 ? 'block' : 'none'
+
   return (
     <section className={styles.container} >
       <h2 className={styles.title}>Produtos:</h2>
@@ -43,7 +45,7 @@ export default function Products() {
             }}
           />
         })}
-        <div className={styles.alert}>
+        <div className={styles.alert} style={{display: alert}}>
           <h2>A busca não encontrou resultados!</h2>
         </div>
       </div>

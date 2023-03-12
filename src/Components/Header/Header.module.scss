@@ -34,3 +34,16 @@
         width: 100%;
     }
 }
+
+@media screen and (min-width: 1250px) {
+    .container {
+        justify-content: space-around;
+    }
+    .imgContainer {
+        text-align: center;
+        background-color: rgb(21, 20, 20);
+        img {
+            width: 50%;
+        }
+    }
+}
