@@ -7,9 +7,9 @@ export default function Product({ img, title, price, onClick }) {
   const leftover = (price - roundedPrice).toFixed(2)
 
   return (
-    <div className={styles.container}>
+    <div onClick={onClick} className={styles.container}>
       <div className={styles.image}>
-        <img onClick={onClick} src={img} alt={title} />
+        <img src={img} alt={title} />
       </div>
       <div className={styles.text}>
         <h2>{title}</h2>

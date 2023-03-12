@@ -4,6 +4,7 @@ import styles from './Header.module.scss'
 import Button from 'Components/Button'
 import { SearchContext } from 'Context/search'
 import banner from 'assets/img/banner.jpeg'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
 
@@ -33,7 +34,7 @@ export default function Header() {
         </div>
       </section>
       <section className={styles.imgContainer}>
-        <img src={banner} alt="" />
+        <Link to={"/"}><img src={banner} alt="" /></Link>
       </section>
     </>
   )
