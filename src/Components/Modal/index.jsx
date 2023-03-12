@@ -29,7 +29,6 @@ export default function Modal({ isOpen, setModal, product }) {
                 } 
             })
             if(repeated === false) {
-                console.log('produto adicionado')
                 newCart = [...cart]
                 newCart.push(product)
                 setCart(newCart)
@@ -37,14 +36,6 @@ export default function Modal({ isOpen, setModal, product }) {
             }
         }
     }
-
-    document.onkeydown = function(e) {
-        if(e.key === 'Escape') {
-            setModal()
-            setWaming('')
-            setCheck('none')
-        }
-      }
 
     const roundedPrice = Math.floor(product.price)
     const leftover = (product.price - roundedPrice).toFixed(2)

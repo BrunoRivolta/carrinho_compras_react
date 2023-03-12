@@ -3,6 +3,7 @@ import Header from 'Components/Header'
 import Navigation from 'Components/Navigation'
 import CartProvider from 'Context/cart'
 import OrderProvider from 'Context/order'
+import SearchProvider from 'Context/search'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
@@ -11,10 +12,12 @@ export default function StandardPage() {
     <main>
         <CartProvider>
           <OrderProvider>
-            <Navigation /> 
-            <Header />
-              <Outlet />
-            <Footer /> 
+            <SearchProvider>
+              <Navigation /> 
+              <Header />
+                <Outlet />
+              <Footer /> 
+            </SearchProvider>
           </OrderProvider>
         </CartProvider>
     </main>

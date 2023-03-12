@@ -1,5 +1,5 @@
 .container {
-    height: 100px;
+    height: 80px;
     background-color: rgb(171, 179, 179);
     display: flex;
     justify-content: space-between;
@@ -10,15 +10,21 @@
         flex-direction: row;
         align-items: center;
         img {
-            height: 70px;
+            height: 30px;
+            padding-right: 5px;
         }
         h1 {
-
+            font-size: 1em;
         }
     }
     .search {
+        display: flex;
         h1 {
 
+        }
+        input {
+            border-radius: 5px;
+            width: 120px;
         }
     }
 

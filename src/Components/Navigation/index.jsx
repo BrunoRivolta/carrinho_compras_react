@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BsCart4 } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { BiStoreAlt } from 'react-icons/bi'
 import styles from './Navigation.module.scss'
 import { CartContext } from 'Context/cart'
 
@@ -18,6 +19,10 @@ export default function Navigation() {
         }
     }
 
+    const cartNumber = cart.length === 0 ? 'none' : 'block'
+    const addZero = cart.length <= 9 ? '0' : ''
+    const score = addZero + cart.length
+
   return (
     <section>
         <section className={styles.container}>
@@ -27,8 +32,16 @@ export default function Navigation() {
                 />
             <div className={styles.cart_container}>
                 <Link to={'/carrinho'} ><BsCart4 className={styles.cart} /></Link> 
-                <p className={styles.cart_number}>0{cart.length}</p>
-                <span className={styles.cart_back}></span>
+                <p 
+                    className={styles.cart_number}
+                    style={{display: cartNumber}} 
+                >
+                    {score}
+                </p>
+                <span 
+                    className={styles.cart_back} 
+                    style={{display: cartNumber}} 
+                ></span>
             </div>
             <nav className={styles.links} style={menu} onClick={() => menuToggle()}>
                 <Link to={'/'} className={styles.link}> Loja</Link>
