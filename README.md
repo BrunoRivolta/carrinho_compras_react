@@ -1,74 +1,66 @@
-# Getting Started with Create React App
+# Carrinho de Compras - React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Loja virtual que simula o fluxo de um carrinho de compras.
 
-In the project directory, you can run:
 
-### `npm start`
+![Galeria de fotos](https://images2.imgbox.com/8d/15/kSN6eoBM_o.gif)    
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
+![HTML5](https://img.shields.io/badge/html5-%23323330.svg?style=for-the-badge&logo=html5&logoColor=%23ff8c3b) 
+![Sass](https://img.shields.io/badge/sass-%23323330.svg?style=for-the-badge&logo=sass&logoColor=%23db42b2) 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Deploy
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O deploy foi feito usando GitHub / Vercel. Acesse agora pelo link abaixo:
 
-### `npm run build`
+https://carrinho-compras-react.vercel.app/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Repositório
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Segue abaixo o link do repositório e documentação no GitHub 
 
-### `npm run eject`
+https://github.com/BrunoRivolta/carrinho_compras_react
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Funcionalidades
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Menu Responsivo
 
-## Learn More
+Menu hamburguer em dispositivo mobile e comum em dispositivos com maior resolução.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Busca
 
-### Code Splitting
+Campo de busca que filtra os produto de acordo com a palavra digitada.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Carrinho de Compras
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Os itens interessantes podem ser eviador ao carrinho de compras. A cada item adicionado ao carrinho é disparado um contador que é exibido acima do carrinho de compras.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Pedidos
 
-### Advanced Configuration
+Após pagar os itens que estão no carrinho de compras, os mesmos se transformam em um pedido e podem ser acompanhados na pagina de pedidos. Ao realizar um pedido o carrinho de compras é resetado. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Recursos do React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Neste projeto foram usados os seguintes recursos:
+ - React Router Dom
+ - React Icons
+ - Sass
+ - React Context
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Redes Sociais / Contato
 
-Lista de tarefas
-
-- fazer pagina 404
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/brunorivolta/)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UC6XJ3aQvFBU7gqHvebolwJQ) 
+[![Blogger](https://img.shields.io/badge/Blogger-%23FF5722.svg?logo=Blogger&logoColor=white)](https://devrivolta.blogspot.com/) 
+[![GitHub](https://img.shields.io/badge/GitHub-%23FFFFFF.svg?logo=GitHub&logoColor=black)](https://github.com/BrunoRivolta) 
