@@ -69,8 +69,7 @@ export default function Modal({ isOpen, setModal, product }) {
                                     className={styles.qnt}
                                     toAlter={value => setQnt(value)} 
                                     type={'number'} 
-                                    min={1}
-                                    placeholder={1}
+                                    value={'1'}
                                 />
                                 <Button 
                                     onClick={() => 

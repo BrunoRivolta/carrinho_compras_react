@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Input.module.scss'
 
-export default function Input({ toAlter, type, min, placeholder }) {
+export default function Input({ toAlter, type, min, placeholder, value }) {
 
     const toType = (event) => {
         toAlter(event.target.value)
@@ -15,6 +15,7 @@ export default function Input({ toAlter, type, min, placeholder }) {
       onChange={toType} 
       min={min}
       placeholder={placeholder}
+      value={value}
     />
   )
 }
