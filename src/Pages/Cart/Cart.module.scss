@@ -1,5 +1,7 @@
+@import '../../styles/variables';
+
 .container {
-    background-color: #dbdbdb;
+    background-color: $background;
     padding-bottom: 20px;
     min-height: 75vh;
     .title {
@@ -40,7 +42,7 @@
         h2 {
             margin: 5px;
             font-size: 1em;
-            color: #26ae11;
+            color: $green;
         }
         p {
             font-size: 0.8em;

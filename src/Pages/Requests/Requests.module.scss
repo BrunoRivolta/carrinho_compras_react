@@ -1,5 +1,7 @@
+@import '../../styles/variables';
+
 .container {
-    background-color: #dbdbdb;
+    background-color: $background;
     padding-bottom: 15px;
     min-height: 70vh;
     .title {
@@ -9,7 +11,7 @@
     }
     .products {
         border-radius: 10px;
-        background-color: white;
+        background-color: $white;
         padding: 5px 10px;
         margin: 10px 0;
         .info {
@@ -23,7 +25,7 @@
             p {
                 font-size: 0.8em;
                 font-weight: 300;
-                color: rgb(220, 213, 213);
+                color: $background;
             }
             .subtitle {
                 font-size: 1em;
@@ -31,7 +33,7 @@
                 padding: 5px 0;
             }
             .active {
-                color: rgb(35, 109, 21);
+                color: $green;
                 font-size: 0.8em;
                 font-weight: 400;
             }           
@@ -56,7 +58,7 @@
         .products {
             width: 80%;
             border-radius: 10px;
-            background-color: white;
+            background-color: $white;
             padding: 5px 10px;
             margin: 10px 0;
             .info {
@@ -70,7 +72,7 @@
                 p {
                     font-size: 0.8em;
                     font-weight: 300;
-                    color: rgb(220, 213, 213);
+                    color: $background;
                 }
                 .subtitle {
                     font-size: 1em;
@@ -78,7 +80,7 @@
                     padding: 5px 0;
                 }
                 .active {
-                    color: rgb(35, 109, 21);
+                    color: $green;
                     font-size: 0.8em;
                     font-weight: 400;
                 }           

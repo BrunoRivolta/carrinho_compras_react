@@ -1,6 +1,8 @@
+@import '../../../styles/variables';
+
 .container {
     margin: 5px;
-    background-color: #ffffff;
+    background-color: $white;
     border-radius: 10px;
     width: 250px;
     height: 350px;
@@ -33,19 +35,19 @@
                 position: relative;
                 display: inline;
                 bottom: 10px;
-                color: #000000;
+                color: $black;
                 font-weight: 400;
             }
             .slice {
                 margin-top: 5px;
                 font-size: 0.8em;
-                color: #000000;
+                color: $black;
                 font-weight: 400;
             }
         }
         p {
             font-size: 0.8em;
-            color: #00A650;
+            color: $green;
             font-weight: 600;
         }
     }

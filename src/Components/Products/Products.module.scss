@@ -1,5 +1,7 @@
+@import '../../styles/variables';
+
 .container {
-    background-color: #dbdbdb;
+    background-color: $background;
     padding-bottom: 15px;
     min-height: 75vh;
     .title {

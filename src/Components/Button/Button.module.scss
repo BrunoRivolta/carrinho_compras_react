@@ -1,11 +1,13 @@
+@import '../../styles/variables';
+
 .button {
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
     transition: 0.7s;
     &:hover {
-        background-color: #0571ff;
-        color: white;
-        border-color: rgb(33, 71, 88);
+        background-color: $menu-color;
+        color: $white;
+        border-color: $menu-color-dark;
     }
 }

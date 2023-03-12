@@ -1,22 +1,24 @@
+@import '../../styles/variables';
+
 .container {
     height: 40px;
-    background-color: rgb(0, 109, 160);
+    background-color: $menu-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2px 0 10px;
     .burguer {
         font-size: 1.5em;
-        fill: white;
+        fill: $white;
     }
     .cart_container {
         display: flex;
         .cart {
             font-size: 1.5em;
-            fill: white;
+            fill: $white;
         }
         .cart_number {
-            color: #ffffff;
+            color: $white;
             font-size: 0.6em;
             font-weight: 600;
             z-index: 2;
@@ -25,7 +27,7 @@
             position: relative;
             top: -1.5px;
             left: -13px;
-            background: red;
+            background: $red;
             border-radius: 50%;
             width: 15px;
             height: 15px;
@@ -45,7 +47,7 @@
         transition: 0.5s;
         .link {
             text-decoration: none;
-            color: white;
+            color: $white;
             font-size: 1em;
             padding: 10px 0;
             &::before {

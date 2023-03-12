@@ -1,6 +1,8 @@
+@import '../../../styles/variables';
+
 .item {
     .prod {
         font-size: 0.8em;
-        color: black;
+        color: $black;
     }
 }

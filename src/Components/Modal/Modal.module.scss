@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .background {
     position: fixed;
     top: 0;
@@ -14,7 +16,7 @@
         left: 10px;
     }
     .modal {
-        background-color: white;
+        background-color: $white;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -57,7 +59,7 @@
                     margin: 5px 0;
                 }
                 .freight {
-                    color: #00A650;
+                    color: $green;
                     font-weight: 600;
                 }
                 .action {
@@ -67,14 +69,14 @@
                     .check{
                         padding-left: 10px;
                         font-size: 1.5em;
-                        fill: #0e8b42;
+                        fill: $green;
                     }
                 }
             }
             .description {
                 padding: 0 10px;
                 span {
-                    color: red;
+                    color: $red;
                     font-size: 0.8em;
                 }
                 h2 {
