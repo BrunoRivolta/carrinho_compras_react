@@ -1,6 +1,7 @@
 .container {
     background-color: #dbdbdb;
     padding-bottom: 15px;
+    min-height: 75vh;
     .title {
         font-size: 1em;
         padding: 10px;
@@ -10,5 +11,12 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .alert {
+        text-align: center;
+        h2 {
+            padding-top: 20px;
+            font-size: 1.3em;
+        }
     }
 }
